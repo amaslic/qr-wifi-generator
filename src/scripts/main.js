@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const printButton = document.getElementById('print-btn');
 
     function validateInputs() {
-        // If type is 'nopass', password is not required
         if (wifiTypeInput.value === 'nopass') {
             generateButton.disabled = !wifiNameInput.value;
         } else {
@@ -33,10 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function printQRCode() {
-        // Get the QR code's HTML (canvas or img)
         const qrHTML = qrCodeContainer.innerHTML;
 
-        // Set grid size
         const cols = 4;
         const rows = 6;
 
